@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SmartProd</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1B-zz164dVnETwTj2RMehVKzDxC4HiEIz">
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1B-zz164dVnETwTj2RMehVKzDxC4HiEIz">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SmartProd">
+  <meta name="theme-color" content="#030712">
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #030712;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🌟 วาง URL Web App ของคุณ (ลิงก์ /exec) ลงในเครื่องหมายคำพูดตรงนี้ -->
+  <iframe src="วาง_URL_GOOGLE_APPS_SCRIPT_ตรงนี้" allow="camera; microphone; geolocation"></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
